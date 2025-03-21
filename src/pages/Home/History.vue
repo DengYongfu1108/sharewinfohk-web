@@ -13,7 +13,6 @@ import historyStep from '../../assets/images/history-step.png'
     width: 1200px;
     height: 350px;
     margin: 50px auto 0px;
-    border: 1px solid red;
 
     img {
         height: 100%;
