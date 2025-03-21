@@ -45,7 +45,7 @@ onMounted(() => {
         itemN++;
     });
 });
-const handleLiMouseEnter = (item) => {
+const handleLiMouseEnter = () => {
     removeAllStyle();
 };
 </script>
@@ -60,7 +60,7 @@ const handleLiMouseEnter = (item) => {
                 <li :ref="listItems[0]" @click="toPage('/')">
                     Home Page
                 </li>
-                <li :ref="listItems[1]" class="products-list">
+                <li :ref="listItems[1]" class="products-list" @mouseleave="handleLiMouseEnter">
                     Products
                     <div class="products-box">
                         <!-- Data Analysis -->
@@ -104,7 +104,7 @@ const handleLiMouseEnter = (item) => {
                         </div>
                     </div>
                 </li>
-                <li :ref="listItems[2]" class="solution-list">
+                <li :ref="listItems[2]" class="solution-list" @mouseleave="handleLiMouseEnter">
                     Solution
                     <div class="solution-box">
                         <div class="list-item-box">
@@ -144,7 +144,7 @@ const handleLiMouseEnter = (item) => {
                         </div>
                     </div>
                 </li>
-                <li :ref="listItems[3]" class="services-list">
+                <li :ref="listItems[3]" class="services-list" @mouseleave="handleLiMouseEnter">
                     Services
                     <div class="services-box">
                         <div class="list-item-box">
@@ -170,7 +170,7 @@ const handleLiMouseEnter = (item) => {
                         </div>
                     </div>
                 </li>
-                <li :ref="listItems[4]" class="industry-list">
+                <li :ref="listItems[4]" class="industry-list" @mouseleave="handleLiMouseEnter">
                     Industry Case
                     <div class="industry-box">
                         <div class="list-item-box">
@@ -186,7 +186,7 @@ const handleLiMouseEnter = (item) => {
                         </div>
                     </div>
                 </li>
-                <li :ref="listItems[5]" class="aboutus-list">
+                <li :ref="listItems[5]" class="aboutus-list" @mouseleave="handleLiMouseEnter">
                     About Us
                     <div class="aboutus-box">
                         <div class="list-item-box">
