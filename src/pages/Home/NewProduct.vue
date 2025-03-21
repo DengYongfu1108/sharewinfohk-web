@@ -1,7 +1,15 @@
 <script setup>
+import { useRouter } from 'vue-router';
 import logo1 from '../../assets/images/-47769.png';
 import logo2 from '../../assets/images/-47768.png';
 import logo3 from '../../assets/images/-47767.png';
+const router = useRouter();
+const toPage = (path) => {
+    router.push(path)
+}
+const toLink = (path) => {
+    window.open(path, '_blank');
+}
 </script>
 
 <template>
@@ -24,7 +32,7 @@ import logo3 from '../../assets/images/-47767.png';
                         data and reports.
                     </p>
                 </div>
-                <div class="item-btn">
+                <div class="item-btn" @click="toPage('/productsWinBi')">
                     <span>Learn More</span>
                 </div>
             </div>
@@ -43,7 +51,7 @@ import logo3 from '../../assets/images/-47767.png';
                         user numbers, helping enterprises create their own Power BI.
                     </p>
                 </div>
-                <div class="item-btn">
+                <div class="item-btn" @click="toPage('/ProductsPBIPortal')">
                     <span>Learn More</span>
                 </div>
             </div>
@@ -62,7 +70,7 @@ import logo3 from '../../assets/images/-47767.png';
                         Get rid of the restrictions of Power BI accounts
                     </p>
                 </div>
-                <div class="item-btn">
+                <div class="item-btn" @click="toLink('https://www.pbiplus.com/')">
                     <span>Learn More</span>
                 </div>
             </div>
