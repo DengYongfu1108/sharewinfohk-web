@@ -32,15 +32,17 @@ const toLink = (path) => {
 }
 
 onMounted(() => {
+    let itemN = 0;
     listItems.value.forEach((itemRef) => {
         const item = itemRef.value;
-        if (item) {
+        if (item && itemN != 0) {
             item.addEventListener('mouseenter', () => {
                 removeAllStyle();
                 item.style.backgroundColor = '#F5F7F9'
                 item.style.color = '#3878FF'
             });
         }
+        itemN++;
     });
 });
 const handleLiMouseEnter = (item) => {
@@ -272,9 +274,18 @@ const handleLiMouseEnter = (item) => {
 }
 
 /* 使用相邻兄弟选择器 */
-.nav-list .list-box:hover .hover-bg {
+// .list-box:hover .hover-bg {
+//     display: block;
+// }
+.products-list:hover~.hover-bg,
+.solution-list:hover~.hover-bg,
+.services-list:hover~.hover-bg,
+.industry-list:hover~.hover-bg,
+.aboutus-list:hover~.hover-bg {
     display: block;
 }
+
+
 
 .list-item-box {
     height: 100%;
